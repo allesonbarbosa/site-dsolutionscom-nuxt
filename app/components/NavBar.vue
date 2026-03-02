@@ -38,7 +38,8 @@
       </div>
       <div class="d-flex">
         <IdiomaSelect />
-        <a
+        <button
+          type="button"
           class="navbar-toggler pe-0 d-flexlitems-center"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
@@ -46,7 +47,7 @@
           aria-label="burger"
         >
           <span class="navbar-toggler-icon" />
-        </a>
+      </button>
       </div>
     </div>
   </nav>

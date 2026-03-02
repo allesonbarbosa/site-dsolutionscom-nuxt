@@ -5,7 +5,7 @@
       type="button"
       data-bs-toggle="dropdown"
     >
-      <img :src="flagIcon" class="flag-idioma" >
+      <img :src="flagIcon" class="flag-idioma" alt="flag-idioma-selecionado">
     </button>
 
     <ul class="dropdown-menu dropdown-menu-end bg-secondary">
@@ -14,7 +14,7 @@
           class="dropdown-item d-flex align-items-center"
           :to="$switchLocalePath(idioma)"
         >
-          <img :src="flag[idioma]" class="flag-idioma me-2" />
+          <img :src="flag[idioma]" class="flag-idioma me-2" alt="flag-idioma" />
           {{ $t(`idiomas.${idioma}`) }}
         </NuxtLink>
       </li>

@@ -2,13 +2,15 @@
   <div>
     <WhatsappButton />
     <NavBar />
-    <HomeView />
-    <div class="d-flex flex-column gap-5 mt-4 px-md-5 px-3">
-      <AboutView />
-      <SolucoesView />
-      <AtuacoesView />
-    </div>
-    <ContatoView />
+    <main id="main-content">
+      <HomeView />
+      <div class="d-flex flex-column gap-5 mt-4 px-md-5 px-3">
+        <AboutView />
+        <SolucoesView />
+        <AtuacoesView />
+      </div>
+      <ContatoView />
+    </main>
     <FooterView />
   </div>
 </template>
