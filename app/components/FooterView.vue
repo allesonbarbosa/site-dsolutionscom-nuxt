@@ -18,7 +18,7 @@
       <div class="pe-3 col-sm-3 text-center text-sm-start">
         <h6 class="text-white">{{ $t("footer.mapaSite") }}</h6>
         <ul class="navbar-nav justify-content-center flex-grow-1 text-white">
-          <li v-for="page in pages" :key="page" class="nav-item">
+          <li v-for="page in pages" :key="page" class="nav-item d-flex justify-content-center justify-content-sm-start">
             <button class="nav-link mx-lg-2" @click="scrollTo(page)">
               {{ $t(`navbar.${page}`) }}
             </button>

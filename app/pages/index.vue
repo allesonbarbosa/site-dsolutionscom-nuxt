@@ -38,5 +38,16 @@ useHead({
 
     { rel: "alternate", hreflang: "x-default", href: `${baseUrl}/pt` },
   ],
+  script: [
+    {
+      type: "application/ld+json",
+      childen: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Dsolutionscom",
+        url: "https://dsolutionscom.com.br",
+      }),
+    },
+  ],
 });
 </script>
