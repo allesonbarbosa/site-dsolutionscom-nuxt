@@ -1,26 +1,26 @@
 <template>
   <div class="hero-container d-flex flex-column align-items-center p-3">
     <h1 class="hero-title text-center">
-      {{ $t('heroCard.titulo') }}
+      {{ $t("heroCard.titulo") }}
     </h1>
     <div class="hero-image d-flex align-items-center justify-content-center">
       <img :src="Eagle" alt="hero-imagem" />
     </div>
     <BaseCard class="hero-card">
-      <p class="hero-text text-white text-center">
-        {{ $t('heroCard.descricao') }}
-      </p>
+      <h2 class="hero-text text-white text-center">
+        {{ $t("heroCard.descricao") }}
+      </h2>
       <a href="#contato" class="btn btn-secondary hero-btn">
-        {{ $t('heroCard.faleConosco') }}
+        {{ $t("heroCard.faleConosco") }}
       </a>
     </BaseCard>
   </div>
 </template>
 
 <script>
-import Eagle from '../assets/eagle.jpeg';
+import Eagle from "../assets/eagle.jpeg";
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   data() {
     return {
       Eagle: Eagle,
@@ -45,7 +45,7 @@ export default {
   overflow: hidden;
 }
 .hero-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
@@ -63,7 +63,7 @@ export default {
 }
 
 .hero-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 85vw;
   height: 3px;
@@ -100,5 +100,12 @@ export default {
 
 .hero-btn:hover {
   transform: scale(1.05);
+}
+
+.hero-text {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 </style>

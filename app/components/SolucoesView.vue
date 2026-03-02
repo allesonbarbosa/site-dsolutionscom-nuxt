@@ -4,8 +4,8 @@
     id="solucoes"
   >
     <div class="text-center">
-      <h1 class="text-primary">{{ $t('solucoesCard.titulo') }}</h1>
-      <p class="text-body-secondary">{{ $t('solucoesCard.descricao') }}</p>
+      <h3 class="text-primary">{{ $t('solucoesCard.titulo') }}</h3>
+      <h4 class="text-body-secondary">{{ $t('solucoesCard.descricao') }}</h4>
     </div>
     <div class="row w-100">
       <div v-for="(item, index) in cardItems" :key="index" class="col-md-4 mb-3">

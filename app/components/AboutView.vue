@@ -4,10 +4,10 @@
     class="d-flex flex-column justify-content-start align-items-center gap-2"
   >
     <div class="text-center">
-      <h1 class="text-primary">{{ $t("aboutCard.quemSomos.titulo") }}</h1>
-      <p class="text-body-secondary">
+      <h3 class="text-primary">{{ $t("aboutCard.quemSomos.titulo") }}</h3>
+      <h4 class="text-body-secondary">
         {{ $t("aboutCard.quemSomos.descricao") }}
-      </p>
+      </h4>
     </div>
     <div class="row w-100">
       <div

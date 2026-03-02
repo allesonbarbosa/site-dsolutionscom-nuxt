@@ -2,7 +2,7 @@
   <section id="contato" class="bg-primary mt-3 p-md-5 p-3">
     <BaseCard class="px-md-5 px-2 py-3">
       <div class="text-center">
-        <h1 class="text-white">{{ $t("contatoCard.titulo") }}</h1>
+        <h3 class="text-white">{{ $t("contatoCard.titulo") }}</h3>
         <p class="text-light">{{ $t("contatoCard.descricao") }}</p>
         <p class="text-light">{{ $t("contatoCard.subtitulo") }}</p>
       </div>

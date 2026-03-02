@@ -1,10 +1,10 @@
 <template>
   <section
-    class="d-flex flex-column justify-content-start align-items-center gap-2"
     id="about"
+    class="d-flex flex-column justify-content-start align-items-center gap-2"
   >
     <div class="text-center">
-      <h1 class="text-primary">{{ $t('atuacoesCard.titulo') }}</h1>
+      <h3 class="text-primary">{{ $t('atuacoesCard.titulo') }}</h3>
     </div>
     <div class="row w-100">
       <div v-for="(item, index) in cardItems" :key="index" class="col-lg-6 mb-3">
