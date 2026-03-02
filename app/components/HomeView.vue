@@ -10,9 +10,9 @@
       <h2 class="hero-text text-white text-center">
         {{ $t("heroCard.descricao") }}
       </h2>
-      <a href="#contato" class="btn btn-secondary hero-btn">
+      <button class="btn btn-secondary hero-btn" @click="scrollTo('contato')">
         {{ $t("heroCard.faleConosco") }}
-      </a>
+      </button>
     </BaseCard>
   </div>
 </template>
@@ -25,6 +25,17 @@ export default {
     return {
       Eagle: Eagle,
     };
+  },
+  methods: {
+    scrollTo(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    },
   },
 };
 </script>
