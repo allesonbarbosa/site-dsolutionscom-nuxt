@@ -6,48 +6,40 @@
       >
         <img class="footer-logo" :src="logo" alt="imagem-logo" />
         <h5 class="text-white ms-2 m-0">DSolutionscom</h5>
-        <span class="text-white ms-2 m-0">{{ $t('heroCard.titulo') }}</span>
+        <span class="text-white ms-2 m-0">{{ $t("heroCard.titulo") }}</span>
       </div>
       <div class="pe-3 col-sm-3 text-center text-sm-start mb-4">
-        <h6 class="text-white">{{ $t('footer.contatos') }}</h6>
+        <h6 class="text-white">{{ $t("footer.contatos") }}</h6>
         <ul class="navbar-nav justify-content-center flex-grow-1 text-white">
-          <li>{{ $t('footer.telefone') }} {{ contactPhone }}</li>
-          <li>{{ $t('footer.email') }} {{ contactEmail }}</li>
+          <li>{{ $t("footer.telefone") }} {{ contactPhone }}</li>
+          <li>{{ $t("footer.email") }} {{ contactEmail }}</li>
         </ul>
       </div>
       <div class="pe-3 col-sm-3 text-center text-sm-start">
-        <h6 class="text-white">{{ $t('footer.mapaSite') }}</h6>
+        <h6 class="text-white">{{ $t("footer.mapaSite") }}</h6>
         <ul class="navbar-nav justify-content-center flex-grow-1 text-white">
-          <li class="nav-item">
-            <a class="nav-link active mx-lg-2" aria-current="page" href="#">{{
-              $t('navbar.home')
-            }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#about">{{ $t('navbar.sobre') }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#solucoes">{{ $t('navbar.solucoes') }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#contato">{{ $t('navbar.contato') }}</a>
+          <li v-for="page in pages" :key="page" class="nav-item">
+            <button class="nav-link mx-lg-2" @click="scrollTo(page)">
+              {{ $t(`navbar.${page}`) }}
+            </button>
           </li>
         </ul>
       </div>
     </div>
     <span class="text-white m-0 d-flex justify-content-center">
-      {{ $t('footer.direitos', { ano: getAno }) }}
+      {{ $t("footer.direitos", { ano: getAno }) }}
     </span>
   </section>
 </template>
 
 <script>
-import Logo from '../assets/logo-blue.png';
+import Logo from "../assets/logo-blue.png";
 export default {
-  name: 'FooterView',
+  name: "FooterView",
   data() {
     return {
       logo: Logo,
+      pages: ["home", "sobre", "solucoes", "contato"],
     };
   },
   computed: {
@@ -55,12 +47,25 @@ export default {
       return new Date().getFullYear();
     },
     contactEmail() {
-      return useRuntimeConfig().public.contactEmail
+      return useRuntimeConfig().public.contactEmail;
     },
     contactPhone() {
       const number = String(useRuntimeConfig().public.whatsappNumber);
-      const phone = number.slice(2).replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      const phone = number
+        .slice(2)
+        .replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
       return phone;
+    },
+  },
+  methods: {
+    scrollTo(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     },
   },
 };

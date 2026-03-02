@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-container d-flex flex-column align-items-center p-3">
+  <section id="home" class="hero-container d-flex flex-column align-items-center p-3">
     <h1 class="hero-title text-center">
       {{ $t("heroCard.titulo") }}
     </h1>
@@ -14,7 +14,7 @@
         {{ $t("heroCard.faleConosco") }}
       </button>
     </BaseCard>
-  </div>
+  </section>
 </template>
 
 <script>
