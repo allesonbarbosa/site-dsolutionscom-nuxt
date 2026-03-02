@@ -15,10 +15,17 @@
   </div>
 </template>
 <script setup>
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 const baseUrl = "https://dsolutionscom.com.br";
 
 useHead({
+  title: t("seo.home.title"),
+  meta: [
+    {
+      name: "description",
+      content: t("seo.home.description"),
+    },
+  ],
   htmlAttrs: {
     lang: locale.value,
   },
