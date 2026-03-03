@@ -25,6 +25,10 @@ useHead({
       name: "description",
       content: t("seo.home.description"),
     },
+    {
+      name: "keywords",
+      content: t("seo.home.keywords"),
+    }
   ],
   htmlAttrs: {
     lang: locale.value,
