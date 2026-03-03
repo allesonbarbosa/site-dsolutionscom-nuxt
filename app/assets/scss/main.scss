@@ -4,6 +4,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+.swal2-success-line-tip,
+.swal2-success-line-long,
+.swal2-x-mark-line-right,
+.swal2-x-mark-line-left {
+  font-size: 16px !important;
+}
 /* mobile first */
 h1,
 h3 {
