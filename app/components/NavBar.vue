@@ -21,7 +21,7 @@
             aria-label="Close"
           />
         </div>
-        <div class="offcanvas-body w-75">
+        <div class="offcanvas-body w-100">
           <ul class="navbar-nav justify-content-center flex-grow-1 ps-2">
             <li
               v-for="page in pages"
@@ -29,7 +29,7 @@
               class="nav-item"
               data-bs-dismiss="offcanvas"
             >
-              <button class="nav-link mx-lg-2" @click="scrollTo(page)">
+              <button class="nav-link mx-lg-2 w-100 text-start" @click="scrollTo(page)">
                 {{ $t(`navbar.${page}`) }}
               </button>
             </li>
@@ -69,7 +69,7 @@ export default {
   methods: {
     scrollTo(id) {
       const el = document.getElementById(id);
-      if (el) {
+      if (el && id !== 'home') {
         setTimeout(() => {
           el.scrollIntoView({
             behavior: "smooth",
