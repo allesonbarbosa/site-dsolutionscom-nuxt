@@ -37,7 +37,9 @@
         </div>
       </div>
       <div class="d-flex">
-        <IdiomaSelect />
+        <ClientOnly>
+          <IdiomaSelect />
+        </ClientOnly>
         <button
           type="button"
           class="navbar-toggler pe-0 d-flexlitems-center"
