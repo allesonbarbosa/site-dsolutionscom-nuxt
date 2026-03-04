@@ -75,7 +75,7 @@ export default {
             behavior: "smooth",
             block: "start",
           });
-        }, 250);
+        }, 500);
       }
     },
   },

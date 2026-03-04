@@ -17,24 +17,30 @@
 <script setup>
 const { t, locale } = useI18n();
 const baseUrl = "https://dsolutionscom.com.br";
+const localePath = `/${locale.value}`;
+
+useSeoMeta({
+  title: t("seo.home.title"),
+  ogTitle: t("seo.home.title"),
+  description: t("seo.home.description"),
+  ogDescription: t("seo.home.description"),
+  ogType: "website",
+  ogUrl: "https://dsolutionscom.com.br/",
+  ogImage: "https://dsolutionscom.com.br/og/og-home.jpg",
+});
 
 useHead({
-  title: t("seo.home.title"),
   meta: [
-    {
-      name: "description",
-      content: t("seo.home.description"),
-    },
     {
       name: "keywords",
       content: t("seo.home.keywords"),
-    }
+    },
   ],
   htmlAttrs: {
     lang: locale.value,
   },
   link: [
-    { rel: "canonical", href: `${baseUrl}/${locale.value}` },
+    { rel: "canonical", href: `${baseUrl}${localePath}` },
 
     { rel: "alternate", hreflang: "pt-BR", href: `${baseUrl}/pt` },
     { rel: "alternate", hreflang: "es-ES", href: `${baseUrl}/es` },
@@ -45,7 +51,7 @@ useHead({
   script: [
     {
       type: "application/ld+json",
-      childen: JSON.stringify({
+      children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "Dsolutionscom",
